@@ -439,17 +439,17 @@
 // }
 // є масив
 // let users = [
-//     {name: ‘vasya’, age: 31, status: false},
-// {name: ‘petya’, age: 30, status: true},
-// {name: ‘kolya’, age: 29, status: true},
-// {name: ‘olya’, age: 28, status: false},
-// {name: ‘max’, age: 30, status: true},
-// {name: ‘anya’, age: 31, status: false},
-// {name: ‘oleg’, age: 28, status: false},
-// {name: ‘andrey’, age: 29, status: true},
-// {name: ‘masha’, age: 30, status: true},
-// {name: ‘olya’, age: 31, status: false},
-// {name: ‘max’, age: 31, status: true}
+//     {name: 'vasya', age: 31, status: false},
+// {name: 'petya', age: 30, status: true},
+// {name: 'kolya', age: 29, status: true},
+// {name: 'olya', age: 28, status: false},
+// {name: 'max', age: 30, status: true},
+// {name: 'anya', age: 31, status: false},
+// {name: 'oleg', age: 28, status: false},
+// {name: 'andrey', age: 29, status: true},
+// {name: 'masha', age: 30, status: true},
+// {name: 'olya', age: 31, status: false},
+// {name: 'max', age: 31, status: true}
 // ];
 // за допомоги циклу вивести:
 //     – користувачів зі статусом true
@@ -566,8 +566,8 @@
 //     ]
 //     f(users)
 // }
-// – створити функцію яка приймає масив об’єктів з наступними полями id,name,age , та виводить їх в документ.
-// Для кожного об’єкту окремий блок.
+// – створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ.
+// Для кожного об'єкту окремий блок.
 // {
 //     let arr: number[] = [12, 32, 23, 4, 56]
 //
@@ -634,7 +634,7 @@
 //     console.log(exchange(10000, [{currency: 'USD', value: 25}, {currency: 'EUR', value: 42}], 'USD'));
 // }
 // Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
-// Приклад exchange(10000,[{currency:’USD’,value:25},{currency:’EUR’,value:42}],’USD’) // => 400
+// Приклад exchange(10000,[{currency:'USD',value:25},{currency:'EUR',value:42}],'USD') // => 400
 //--------------------------------------------------------------------------------------------------------------------------//
 // {
 //     let square = (width: number, height: number): number => {
@@ -730,8 +730,8 @@
 //         age: number
 //     }[]
 // }
-// – створити функцію яка приймає масив об’єктів з наступними полями id,name,age ,
-// та виводить їх в документ. Для кожного об’єкту окремий блок.
+// – створити функцію яка приймає масив об'єктів з наступними полями id,name,age ,
+// та виводить їх в документ. Для кожного об'єкту окремий блок.
 // {
 //     let foo = (arr:number[]):number => {
 //        let minNumber = arr[0]
@@ -778,14 +778,326 @@
 //     console.log(exam1.length, exam2.length, exam3.length)
 // }
 // – Знайти та вивести довижину настипних стрінгових значень
-//  ‘hello world’
-// ‘lorem ipsum’
-// ‘javascript is cool’
-{
-    let exam1 = 'HELLO WORLD';
-    let exam2 = 'LOREM IPSUM';
-    let exam3 = 'JAVASCRIPT IS COOL';
-    console.log(exam1.toLowerCase(), exam2.toLowerCase(), exam3.toLowerCase());
-}
+//  'hello world'
+// 'lorem ipsum'
+// 'javascript is cool'
+// {
+//     let exam1:string = 'HELLO WORLD'
+//     let exam2:string = 'LOREM IPSUM'
+//     let exam3: string = 'JAVASCRIPT IS COOL'
+//
+//     console.log(exam1.toLowerCase(), exam2.toLowerCase(), exam3.toLowerCase())
+// }
 // – Перевести до нижнього регістру настипні стрінгові значення
-//       ‘HELLO WORLD’, ‘LOREM IPSUM’, ‘JAVASCRIPT IS COOL’
+//       'HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'
+// {
+//     let exam:string = '  dirty string '
+//     console.log(exam.trim())
+// }
+// – Є “брудна” стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
+// {
+//     function foo(text:string):string|string[] {
+//         if (text){
+//             let arr:string[] = text.split(' ')
+//             return arr
+//         }
+//         return ' '
+//     }
+//
+//     console.log(foo('Ревуть воли як ясла повні'));
+// }
+// – Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
+// let str = 'Ревуть воли як ясла повні';
+// let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
+// {
+//     let arr: number[] = [10, 8, -7, 55, 987, -1011, 0, 1050, 0]
+//     let stringArr: string[] = arr.map(number => number + '')
+//     console.log(stringArr)
+// }
+// – є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об'єкти в масиві на стрінгові.
+// {
+//     function sortNums(array: number[], direction: string) {
+//         if (direction === 'ascending') {
+//             return array.sort((a: number, b: number) => a - b)
+//         }
+//         if (direction === 'descending') {
+//             return array.sort((a: number, b: number) => b - a)
+//         }
+//         else return new Error('Incorrect direction')
+//     }
+//
+//     let nums = [11, 21, 3]
+//     console.log(sortNums(nums, 'ascending'));
+//     console.log(sortNums(nums, 'descending'));
+// }
+// – створити функцію sortNums(array,direction), яка прймає масив чисел,
+// та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
+// let nums = [11,21,3];
+// sortNums(nums,'ascending') // [3,11,21]
+// sortNums(nums,'descending') // [21,11,3]
+// {
+//     type Courses = {
+//         title: string
+//         monthDuration: number
+//     }[]
+//     let coursesAndDurationArray: Courses = [
+//         {title: 'JavaScript Complex', monthDuration: 5},
+//         {title: 'Java Complex', monthDuration: 6},
+//         {title: 'Python Complex', monthDuration: 6},
+//         {title: 'QA Complex', monthDuration: 4},
+//         {title: 'FullStack', monthDuration: 7},
+//         {title: 'Frontend', monthDuration: 4}
+//     ]
+//
+//     let list = coursesAndDurationArray
+//         .sort((a, b) => b.monthDuration - a.monthDuration)
+//         .filter(value => value.monthDuration > 5)
+//         .map((value, index) => ({...value, id: index + 1}))
+//
+//     console.log(list)
+// }
+// — відсортувати його за спаданням за monthDuration
+// — відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
+// — за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
+// {
+//     type Courses = {
+//       title: string
+//       monthDuration:number
+//       hourDuration:number
+//       modules:string[]
+//     }[]
+//
+//     let coursesArray:Courses = [
+//         {
+//             title: 'JavaScript Complex',
+//             monthDuration: 5,
+//             hourDuration: 909,
+//             modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+//         },
+//         {
+//             title: 'Java Complex',
+//             monthDuration: 6,
+//             hourDuration: 909,
+//             modules: ['html',
+//                 'css',
+//                 'js',
+//                 'mysql',
+//                 'mongodb',
+//                 'angular',
+//                 'aws',
+//                 'docker',
+//                 'git',
+//                 'java core',
+//                 'java advanced']
+//         },
+//         {
+//             title: 'Python Complex',
+//             monthDuration: 6,
+//             hourDuration: 909,
+//             modules: ['html',
+//                 'css',
+//                 'js',
+//                 'mysql',
+//                 'mongodb',
+//                 'angular',
+//                 'aws',
+//                 'docker',
+//                 'python core',
+//                 'python advanced']
+//         },
+//         {
+//             title: 'QA Complex',
+//             monthDuration: 4,
+//             hourDuration: 909,
+//             modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+//         },
+//         {
+//             title: 'FullStack',
+//             monthDuration: 7,
+//             hourDuration: 909,
+//             modules: ['html',
+//                 'css',
+//                 'js',
+//                 'mysql',
+//                 'mongodb',
+//                 'react',
+//                 'angular',
+//                 'aws',
+//                 'docker',
+//                 'git',
+//                 'node.js',
+//                 'python',
+//                 'java']
+//         },
+//         {
+//             title: 'Frontend',
+//             monthDuration: 4,
+//             hourDuration: 909,
+//             modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+//         }]
+//
+//     console.log(coursesArray.filter(value => value.modules.includes('sass')));
+//     console.log(coursesArray.filter(value => value.modules.includes('docker')));
+// }
+// взяти з arrays.js масив coursesArray
+// –написати пошук всіх об’єктів, в яких в modules є sass
+// –написати пошук всіх об’єктів, в яких в modules є docker
+// {
+//     type Card = {
+//         suit: string
+//         value: string
+//         color: string
+//     }
+//     const cardSuit: string[] = ['spade', 'diamond', 'heart', 'clubs']
+//     const cardValue: string[] = ['6', '7', '8', '9', '10', 'ace', 'jack', 'queen', 'king']
+//     let cards: Card[] = []
+//     for (const suit of cardSuit) {
+//         for (const value of cardValue) {
+//             let card: Card = {suit: suit, value: value, color: ''}
+//             if (card.suit === 'heart' || card.suit === 'diamond') {
+//                 card.color = 'red'
+//             } else card.color = 'black'
+//             cards.push(card)
+//         }
+//     }
+//     console.log(cards)
+//
+//     console.log(cards.find(value => value.suit === 'spade' && value.value === 'ace'));
+//     console.log(cards.filter(value => value.value === '6'));
+//     console.log(cards.filter(value => value.color === 'red'));
+//     console.log(cards.filter(value => value.suit === 'diamond'));
+//     console.log(cards.filter(card => card.suit === 'spade' && card.value !== '6' && card.value !== '7' && card.value !== '8'));
+// }
+// описати колоду карт (від 6 до туза без джокерів)
+// - знайти піковий туз
+// - всі шістки
+// - всі червоні карти
+// - всі буби
+// - всі трефи від 9 та більше
+// {
+//     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
+//         value: '', // '6'-'10', 'ace','jack','queen','king'
+//     color:'', // 'red','black'
+// ---------------------------------------------------------------------------------------------------------------------
+// – Створити функцію конструктор для об’єктів User з полями id, name, surname , email, phone
+// створити пустий масив, наповнити його 10 об’єктами new User(….)
+// {
+//     class User  {
+//         id: number
+//         name: string
+//         surname: string
+//         email: string
+//         phone: string
+//
+//
+//     constructor (id: number, name: string, surname: string, email: string, phone: string) {
+//         this.id = id
+//         this.name = name
+//         this.surname = surname
+//         this.email = email
+//         this.phone = phone
+//     }}
+//
+//     let users: User[] = [
+//         new User(6, 'Andrew', 'none', 'qwe@qwe', '+380'),
+//         new User(7, 'Axel', 'none', 'qwe@qwe', '+380'),
+//         new User(8, 'Adam', 'none', 'qwe@qwe', '+380'),
+//         new User(9, 'Addison', 'none', 'qwe@qwe', '+380'),
+//         new User(10, 'Adrian', 'none', 'qwe@qwe', '+380'),
+//         new User(1, 'Ava', 'none', 'qwe@qwe', '+380'),
+//         new User(2, 'Amelia', 'none', 'qwe@qwe', '+380'),
+//         new User(3, 'Anthony', 'none', 'qwe@qwe', '+380'),
+//         new User(4, 'Aurora', 'none', 'qwe@qwe', '+380'),
+//         new User(5, 'Abigail', 'none', 'qwe@qwe', '+380')
+//     ]
+//     console.log(users)
+//
+//     console.log(users.filter(user => user.id % 2 === 0));
+//     console.log(users.sort((user1, user2) => user1.id - user2.id));
+// }
+// {
+//     class Client {
+//         id:number
+//         name:string
+//         surname:string
+//         email:string
+//         phone:string
+//         order:Order[]
+//
+//         constructor(id:number, name:string, surname:string, email:string, phone:string, order:Order[]) {
+//             this.id = id
+//             this.name = name
+//             this.surname = surname
+//             this.email = email
+//             this.phone = phone
+//             this.order = order
+//         }
+//     }
+//     class Order{
+//         item:string
+//         price:number
+//         constructor(item:string,price:number) {
+//             this.item = item
+//             this.price = price
+//         }
+//     }
+//
+//     let clients:Client[] = [
+//         new Client(1, 'naname','mamane','qwe@qwe','+380',[new Order('TV',44),new Order('Phone',55)]),
+//         new Client(1, 'naname','mamane','qwe@qwe','+380',[new Order('TV',44),new Order('Phone',55)])
+//     ]
+//     console.log(clients)
+// }
+// – створити конструктор для об’єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
+// створити пустий масив, наповнити його 10 об’єктами Client
+class Car {
+    constructor(model, manufacturer, year, maximumSpeed, engine) {
+        this.model = model;
+        this.manufacturer = manufacturer;
+        this.year = year;
+        this.maximumSpeed = maximumSpeed;
+        this.engine = engine;
+    }
+    drive() { console.log(`їдемо зі швидкістю ${this.maximumSpeed} на годину`); }
+    info() {
+        for (const key in this) {
+            console.log(key, `-`, this[key]);
+        }
+    }
+}
+let car = new Car('911', 'Porsche', 2022, 260, 3.8);
+car.drive();
+car.info();
+// Створити клас який дозволяє створювати об’єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об’єм двигуна. додати в об’єкт функції:
+// — drive () – яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+// — info () – яка виводить всю інформацію про автомобіль в форматі `назва поля – значення поля`
+// — increaseMaxSpeed (newSpeed) – яка підвищує значення максимальної швидкості на значення newSpeed
+// — changeYear (newValue) – змінює рік випуску на значення newValue
+// — addDriver (driver) – приймає об’єкт який “водій” з довільним набором полів, і додає його в поточний об’єкт car
+// type UserType = {
+//     id:number
+//     name:string
+//     surname:string
+//     email:string
+//     phone:string
+// }
+// function User(id:number, name:string, surname:string, email:string, phone:string) {
+//     this.id = id
+//     this.name = name
+//     this.surname = surname
+//     this.email = email
+//     this.phone = phone
+// }
+// let users:UserType = [
+//     new User(6, 'Andrew', 'none', 'qwe@qwe', '+380'),
+//     new User(7, 'Axel', 'none', 'qwe@qwe', '+380'),
+//     new User(8, 'Adam', 'none', 'qwe@qwe', '+380'),
+//     new User(9, 'Addison', 'none', 'qwe@qwe', '+380'),
+//     new User(10, 'Adrian', 'none', 'qwe@qwe', '+380'),
+//     new User(1, 'Ava', 'none', 'qwe@qwe', '+380'),
+//     new User(2, 'Amelia', 'none', 'qwe@qwe', '+380'),
+//     new User(3, 'Anthony', 'none', 'qwe@qwe', '+380'),
+//     new User(4, 'Aurora', 'none', 'qwe@qwe', '+380'),
+//     new User(5, 'Abigail', 'none', 'qwe@qwe', '+380')
+// ]
+// console.log(users)
