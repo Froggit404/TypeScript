@@ -1185,8 +1185,7 @@ class Car {
     year:number
     maximumSpeed:number
     engine:number
-
-
+    driver?: {name:string, age:number}
 
     constructor(model:string, manufacturer:string, year:number, maximumSpeed:number, engine:number) {
         this.model = model
@@ -1200,12 +1199,17 @@ class Car {
         for (const key in this) {
             console.log(key, `-`, this[key])
         }}
-
-
+    increaseMaxSpeed (newSpeed:number) {this.maximumSpeed = this.maximumSpeed + newSpeed}
+    changeYear (newValue:number) {this.year = newValue}
+    addDriver (driver:{name:string,age:number}) {this.driver = driver}
 }
 let car = new Car('911', 'Porsche', 2022, 260, 3.8)
 car.drive()
+car.addDriver({name:'qqq',age:33})
 car.info()
+car.increaseMaxSpeed(100)
+car.changeYear(2000)
+console.log(car)
 
 // Створити клас який дозволяє створювати об’єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об’єм двигуна. додати в об’єкт функції:
 // — drive () – яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
@@ -1214,30 +1218,51 @@ car.info()
 // — changeYear (newValue) – змінює рік випуску на значення newValue
 // — addDriver (driver) – приймає об’єкт який “водій” з довільним набором полів, і додає його в поточний об’єкт car
 
-// type UserType = {
-//     id:number
-//     name:string
-//     surname:string
-//     email:string
-//     phone:string
+// class Cinderella {
+//     name: string
+//     age: number
+//     footSize: number
+//
+//     constructor(name: string, age: number, footSize: number) {
+//         this.name = name;
+//         this.age = age;
+//         this.footSize = footSize;
+//     }
 // }
-// function User(id:number, name:string, surname:string, email:string, phone:string) {
-//     this.id = id
-//     this.name = name
-//     this.surname = surname
-//     this.email = email
-//     this.phone = phone
+//
+// class Prince {
+//     name: string
+//     age: number
+//     slipper: number
+//     wife?:string
+//
+//     constructor(name: string, age: number, slipper: number) {
+//         this.name = name;
+//         this.age = age;
+//         this.slipper = slipper;
+//     }
 // }
-// let users:UserType = [
-//     new User(6, 'Andrew', 'none', 'qwe@qwe', '+380'),
-//     new User(7, 'Axel', 'none', 'qwe@qwe', '+380'),
-//     new User(8, 'Adam', 'none', 'qwe@qwe', '+380'),
-//     new User(9, 'Addison', 'none', 'qwe@qwe', '+380'),
-//     new User(10, 'Adrian', 'none', 'qwe@qwe', '+380'),
-//     new User(1, 'Ava', 'none', 'qwe@qwe', '+380'),
-//     new User(2, 'Amelia', 'none', 'qwe@qwe', '+380'),
-//     new User(3, 'Anthony', 'none', 'qwe@qwe', '+380'),
-//     new User(4, 'Aurora', 'none', 'qwe@qwe', '+380'),
-//     new User(5, 'Abigail', 'none', 'qwe@qwe', '+380')
+//
+// const cinderellas:Cinderella[] = [
+//     new Cinderella('ewqt', 22, 31),
+//     new Cinderella('ewqr', 23, 32),
+//     new Cinderella('ewqe', 24, 33),
+//     new Cinderella('ewqw', 25, 34),
+//     new Cinderella('ewqq', 26, 35),
 // ]
-// console.log(users)
+// const prince = new Prince("ewq", 43, 33)
+//
+// for (const cinderella of cinderellas) {
+//     if (cinderella.footSize === prince.slipper){
+//         prince.wife = cinderella.name
+//         console.log(prince.wife)
+//     }
+// }
+// console.log(cinderellas.find(cinderella => cinderella.footSize === prince.slipper));
+
+// -створити класс/функцію конструктор попелюшка з полями ім’я, вік, розмір ноги. Створити масив з 10 попелюшок.
+//     Сторити об’єкт класу “принц” за допомоги класу який має поля ім’я, вік, туфелька яку він знайшов.
+//     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+//     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+
+
