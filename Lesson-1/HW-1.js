@@ -940,8 +940,8 @@
 //     console.log(coursesArray.filter(value => value.modules.includes('docker')));
 // }
 // взяти з arrays.js масив coursesArray
-// –написати пошук всіх об’єктів, в яких в modules є sass
-// –написати пошук всіх об’єктів, в яких в modules є docker
+// –написати пошук всіх об'єктів, в яких в modules є sass
+// –написати пошук всіх об'єктів, в яких в modules є docker
 // {
 //     type Card = {
 //         suit: string
@@ -979,8 +979,8 @@
 //         value: '', // '6'-'10', 'ace','jack','queen','king'
 //     color:'', // 'red','black'
 // ---------------------------------------------------------------------------------------------------------------------
-// – Створити функцію конструктор для об’єктів User з полями id, name, surname , email, phone
-// створити пустий масив, наповнити його 10 об’єктами new User(….)
+// – Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
+// створити пустий масив, наповнити його 10 об'єктами new User(….)
 // {
 //     class User  {
 //         id: number
@@ -1048,8 +1048,8 @@
 //     ]
 //     console.log(clients)
 // }
-// – створити конструктор для об’єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
-// створити пустий масив, наповнити його 10 об’єктами Client
+// – створити конструктор для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
+// створити пустий масив, наповнити його 10 об'єктами Client
 // class Car {
 //     model:string
 //     manufacturer:string
@@ -1081,12 +1081,12 @@
 // car.increaseMaxSpeed(100)
 // car.changeYear(2000)
 // console.log(car)
-// Створити клас який дозволяє створювати об’єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об’єм двигуна. додати в об’єкт функції:
+// Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
 // — drive () – яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
 // — info () – яка виводить всю інформацію про автомобіль в форматі `назва поля – значення поля`
 // — increaseMaxSpeed (newSpeed) – яка підвищує значення максимальної швидкості на значення newSpeed
 // — changeYear (newValue) – змінює рік випуску на значення newValue
-// — addDriver (driver) – приймає об’єкт який “водій” з довільним набором полів, і додає його в поточний об’єкт car
+// — addDriver (driver) – приймає об'єкт який “водій” з довільним набором полів, і додає його в поточний об'єкт car
 // class Cinderella {
 //     name: string
 //     age: number
@@ -1128,7 +1128,201 @@
 //     }
 // }
 // console.log(cinderellas.find(cinderella => cinderella.footSize === prince.slipper));
-// -створити класс/функцію конструктор попелюшка з полями ім’я, вік, розмір ноги. Створити масив з 10 попелюшок.
-//     Сторити об’єкт класу “принц” за допомоги класу який має поля ім’я, вік, туфелька яку він знайшов.
+// -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+//     Сторити об'єкт класу “принц” за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+// {
+//     type Course = {
+//         title: string
+//         monthDuration: number
+//         id?: number
+//     }
+//
+//     let coursesAndDurationArray: Course[] = [
+//         {title: 'JavaScript Complex', monthDuration: 5},
+//         {title: 'Java Complex', monthDuration: 6},
+//         {title: 'Python Complex', monthDuration: 6},
+//         {title: 'QA Complex', monthDuration: 4},
+//         {title: 'FullStack', monthDuration: 7},
+//         {title: 'Frontend', monthDuration: 4}
+//     ];
+//    let courses = coursesAndDurationArray.map((course: Course, index: number) => ({id: index + 1,...course }))
+//     console.log(courses)
+// }
+//------------------------------------------------------------------------------------------------------------------------
+// {
+//     let div:HTMLDivElement = document.createElement('div');
+//     div.classList.add('wrap')
+//     div.classList.add('collapse')
+//     div.classList.add('alpha')
+//     div.classList.add('beta')
+//     document.body.append(div, div.cloneNode(true))
+// }
+// - створити блок,
+//     - додати йому класи wrap, collapse, alpha, beta
+// - додати стилі(довільні значення) : колір фону, колір тексту, розмір тексту
+// - додати цей блок в body.
+// - клонувати його повністю, та додати клон в body.
+// {
+//     const arr:string[] = ['Main', 'Products', 'About us', 'Contacts']
+//     let ul:HTMLUListElement = document.createElement('ul');
+//     for (const item of arr) {
+//         let li:HTMLLIElement = document.createElement('li');
+//         li.innerText = `${item}`
+//         ul.appendChild(li)
+//     }
+//     document.body.appendChild(ul)
+// }
+// – Є масив:
+// [‘Main’,’Products’,’About us’,’Contacts’]
+// Зробити ul в середині якої будуть лежати елементи масиву (кожен в своєму li)
+// {
+//     type CourseType ={
+//         title:string
+//         monthDuration:number
+//     }
+//
+//     let coursesAndDurationArray:CourseType[] = [
+//     {title: 'JavaScript Complex', monthDuration: 5},
+//     {title: 'Java Complex', monthDuration: 6},
+//     {title: 'Python Complex', monthDuration: 6},
+//     {title: 'QA Complex', monthDuration: 4},
+//     {title: 'FullStack', monthDuration: 7},
+//     {title: 'Frontend', monthDuration: 4}
+// ];
+//     for (const course of coursesAndDurationArray) {
+//         let courseDiv:HTMLDivElement = document.createElement('div');
+//         let p:HTMLParagraphElement = document.createElement("p");
+//         p.innerText = `${course.title} - ${course.monthDuration}`
+//         courseDiv.appendChild(p)
+//         document.body.appendChild(courseDiv)
+//     }
+//
+// }
+// - Є масив
+// let coursesAndDurationArray = [
+//     {title: 'JavaScript Complex', monthDuration: 5},
+//     {title: 'Java Complex', monthDuration: 6},
+//     {title: 'Python Complex', monthDuration: 6},
+//     {title: 'QA Complex', monthDuration: 4},
+//     {title: 'FullStack', monthDuration: 7},
+//     {title: 'Frontend', monthDuration: 4}
+// ];
+// Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
+// Завдання робити через цикли.
+// {
+//     const h1:HTMLHeadingElement = document.createElement("h1");
+//     h1.id = 'text'
+//     h1.innerText = ('Lorem')
+//
+//     const button:HTMLButtonElement = document.createElement("button");
+//     button.innerText = ('hide')
+//     document.body.append(h1, button)
+//
+//     button.onclick = function () {
+//         h1.remove()
+//     }
+// }
+// – Створити довільний елемент з id = text та створити кнопку.
+// Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id=”text”.
+// {
+//     const form:HTMLFormElement = document.createElement("form");
+//     form.id = 'f1'
+//
+//     const input:HTMLInputElement = document.createElement("input");
+//     input.type = 'number'
+//
+//     const button:HTMLButtonElement = document.createElement("button");
+//     button.innerText = ('check')
+//
+//     form.append(input, button)
+//     document.body.appendChild(form)
+//
+//     form.onsubmit = function (ev) {
+//         ev.preventDefault()
+//         let age:number = +input.value
+//         if (age >= 18) {
+//             console.log('Adult')
+//         } else if (age < 18) {
+//             console.log('Young')
+//         }
+//     }
+// }
+// - створити інпут який приймає вік людини та кнопку яка підтверджує дію.
+// При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
+// {
+//     const form:HTMLFormElement = document.createElement("form");
+//
+//     const name:HTMLInputElement = document.createElement("input");
+//     name.placeholder = ('Name')
+//
+//
+//     const surname:HTMLInputElement = document.createElement("input");
+//     surname.placeholder = ('Surname')
+//
+//     const age:HTMLInputElement = document.createElement("input");
+//     age.placeholder = ('Age')
+//     age.type = ('number')
+//
+//     const button:HTMLButtonElement = document.createElement("button");
+//     button.innerText = ('add')
+//
+//     form.append(name, surname, age, button)
+//     document.body.appendChild(form)
+//
+//     form.onsubmit = function (ev){
+//         ev.preventDefault()
+//         const div:HTMLDivElement = document.createElement("div");
+//         div.innerText = (`Your name - ${name.value} Your surname - ${surname.value} Your age - ${age.value}`)
+//         document.body.appendChild(div)
+//     }
+// }
+// Стоврити форму з трьома полями для name,sruname,age та кнопкою.
+// При натисканні на кнопку зчитати данні з полів, та вивести об'єкт в документ.
+// Іншими словами : заповниои форму, натиснули кнопку, під формою з'явився блок з вашим об'єктом
+// {
+//     let number:number = Number(localStorage.getItem('number'))
+//     number += 1
+//     localStorage.setItem('number', String(number))
+//
+//     let div:HTMLDivElement = document.createElement("div")
+//     document.body.appendChild(div)
+//     div.innerText = String(number)
+// }
+// є сторінка, на якій є блок, я кому знаходиьтся цифра. написати код,
+// який при кожному перезавантажені сторінки буде додавати до неї +1
+{
+    const form = document.createElement("form");
+    document.body.appendChild(form);
+    form.name = 'form';
+    const inputLines = document.createElement("input");
+    inputLines.type = 'number';
+    inputLines.name = 'inputLines';
+    const inputCells = document.createElement("input");
+    inputCells.type = 'number';
+    inputCells.name = 'inputCells';
+    const inputText = document.createElement("input");
+    inputText.name = 'inputText';
+    const button = document.createElement("button");
+    button.innerText = 'Generate';
+    form.append(inputLines, inputCells, inputText, button);
+    const table = document.createElement("table");
+    document.body.appendChild(table);
+    form.onsubmit = function (ev) {
+        table.innerText = "";
+        ev.preventDefault();
+        const linesValue = +form.inputLines.value;
+        const cellsValue = +form.inputCells.value;
+        const textValue = form.inputText.value;
+        for (let i = 0; i < linesValue; i++) {
+            const tr = document.createElement('tr');
+            for (let j = 0; j < cellsValue; j++) {
+                const td = document.createElement('td');
+                td.innerText = textValue;
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+    };
+}
