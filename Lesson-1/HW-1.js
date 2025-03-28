@@ -1364,9 +1364,7 @@
             throw new Error('Error');
         }
         let arr = JSON.parse(lsItem);
-        if (typeof objToAdd === "object") {
-            arr.push(objToAdd);
-        }
+        arr.push(objToAdd);
         localStorage.setItem(arrayName, JSON.stringify(arr));
     }
     let item = { a: 12, b: 32, c: 43 };

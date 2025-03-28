@@ -1517,29 +1517,29 @@
 // При введенні даних обрахунок стається миттєво, без натискань додаткових кнопок
 
 
-{
-    localStorage.setItem('arrayName', JSON.stringify([]))
-
-    function addToLocalStorage(arrayName: string, objToAdd: ObjType) {
-        let lsItem: string = localStorage.getItem(arrayName)!;
-        if (!lsItem) {
-            throw new Error('Error')
-        }
-        let arr: ObjType[] = JSON.parse(lsItem);
-        arr.push(objToAdd)
-        localStorage.setItem(arrayName, JSON.stringify(arr))
-    }
-    type ObjType = {
-        a: number
-        b: number
-        c: number
-    }
-    let item: ObjType = {a: 12, b: 32, c: 43}
-    let item3: ObjType = {a: 1, b: 3, c: 4}
-    addToLocalStorage('arrayName', item)
-    addToLocalStorage('arrayName', item3)
-
-}
+// {
+//     localStorage.setItem('arrayName', JSON.stringify([]))
+//
+//     function addToLocalStorage(arrayName: string, objToAdd: ObjType) {
+//         let lsItem: string = localStorage.getItem(arrayName)!;
+//         if (!lsItem) {
+//             throw new Error('Error')
+//         }
+//         let arr: ObjType[] = JSON.parse(lsItem);
+//         arr.push(objToAdd)
+//         localStorage.setItem(arrayName, JSON.stringify(arr))
+//     }
+//     type ObjType = {
+//         a: number
+//         b: number
+//         c: number
+//     }
+//     let item: ObjType = {a: 12, b: 32, c: 43}
+//     let item3: ObjType = {a: 1, b: 3, c: 4}
+//     addToLocalStorage('arrayName', item)
+//     addToLocalStorage('arrayName', item3)
+//
+// }
 
 // В localStorage зберігаються масиви.
 // Вам потрібно зробити функцію, які дістає потрібний вам масив з localStorage та додає в нього об'єкт
