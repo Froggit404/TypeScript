@@ -1444,45 +1444,104 @@
 // є сторінка, на якій є блок, я кому знаходиьтся цифра. написати код,
 // який при кожному перезавантажені сторінки буде додавати до неї +1
 
+// {-----------
+//     const form:HTMLFormElement = document.createElement("form");
+//     document.body.appendChild(form)
+//     form.name = 'form'
+//
+//     const inputLines:HTMLInputElement = document.createElement("input");
+//     inputLines.type = 'number'
+//     inputLines.name = 'inputLines'
+//
+//     const inputCells:HTMLInputElement = document.createElement("input");
+//     inputCells.type = 'number'
+//     inputCells.name = 'inputCells'
+//
+//     const inputText:HTMLInputElement = document.createElement("input");
+//     inputText.name = 'inputText'
+//
+//     const button:HTMLButtonElement = document.createElement("button");
+//     button.innerText = 'Generate'
+//     form.append(inputLines, inputCells, inputText, button)
+//
+//     const table:HTMLTableElement = document.createElement("table");
+//     document.body.appendChild(table)
+//
+//     form.onsubmit = function (ev):void {
+//         table.innerText = ""
+//         ev.preventDefault()
+//         const linesValue:number = form.inputLines.value;
+//         const cellsValue:number = form.inputCells.value;
+//         const textValue:string = form.inputText.value;
+//
+//         for (let i:number = 0; i < linesValue; i++) {
+//             const tr:HTMLTableRowElement = document.createElement('tr');
+//
+//             for (let j:number = 0; j < cellsValue; j++) {
+//                 const td:HTMLTableCellElement = document.createElement('td');
+//                 td.innerText = textValue
+//                 tr.appendChild(td)
+//             }
+//             table.appendChild(tr)
+//         }
+//     }
+// }
+
+
+// {
+//     let sessionsList:Date[] = JSON.parse(localStorage.getItem('sessionsList')!) || []
+//     sessionsList.push(new Date())
+//     localStorage.setItem('sessionsList', JSON.stringify(sessionsList))
+// }
+
+// Є сторінка index.html (назва довільна), при відвідуванні якої в локальне сховще,
+// в масив sessionsList зберігається інформація про дату та час відвідування сторінки.
+// Є  сторінка sessionsListPage.html (назва довільна),
+// при відвідуванні якої потрібно відмалювати всю інформацію про відвідування сторінки index.html.
+// Інфу НЕ виводити в консоль, а малювати в DOM
+
+
+// {
+//     const input:HTMLInputElement = document.createElement("input");
+//     input.type = 'number'
+//     const div:HTMLDivElement = document.createElement("div");
+//     input.oninput = function () {
+//         let inputValue:number = Number(input.value)
+//         div.innerText = String(inputValue * 2.2)
+//     }
+//     document.body.append(input, div)
+// }
+
+
+// створити конвертор ваги з кг в фунти. данні заповнюються через інпут.
+// При введенні даних обрахунок стається миттєво, без натискань додаткових кнопок
+
+
 {
-    const form:HTMLFormElement = document.createElement("form");
-    document.body.appendChild(form)
-    form.name = 'form'
+    localStorage.setItem('arrayName', JSON.stringify([]))
 
-    const inputLines:HTMLInputElement = document.createElement("input");
-    inputLines.type = 'number'
-    inputLines.name = 'inputLines'
-
-    const inputCells:HTMLInputElement = document.createElement("input");
-    inputCells.type = 'number'
-    inputCells.name = 'inputCells'
-
-    const inputText:HTMLInputElement = document.createElement("input");
-    inputText.name = 'inputText'
-
-    const button:HTMLButtonElement = document.createElement("button");
-    button.innerText = 'Generate'
-    form.append(inputLines, inputCells, inputText, button)
-
-    const table:HTMLTableElement = document.createElement("table");
-    document.body.appendChild(table)
-
-    form.onsubmit = function (ev):void {
-        table.innerText = ""
-        ev.preventDefault()
-        const linesValue:number = +form.inputLines.value;
-        const cellsValue:number = +form.inputCells.value;
-        const textValue:string = form.inputText.value;
-
-        for (let i:number = 0; i < linesValue; i++) {
-            const tr:HTMLTableRowElement = document.createElement('tr');
-
-            for (let j:number = 0; j < cellsValue; j++) {
-                const td:HTMLTableCellElement = document.createElement('td');
-                td.innerText = textValue
-                tr.appendChild(td)
-            }
-            table.appendChild(tr)
+    function addToLocalStorage(arrayName: string, objToAdd: ObjType) {
+        let lsItem: string = localStorage.getItem(arrayName)!;
+        if (!lsItem) {
+            throw new Error('Error')
         }
+        let arr: ObjType[] = JSON.parse(lsItem);
+        arr.push(objToAdd)
+        localStorage.setItem(arrayName, JSON.stringify(arr))
     }
+    type ObjType = {
+        a: number
+        b: number
+        c: number
+    }
+    let item: ObjType = {a: 12, b: 32, c: 43}
+    let item3: ObjType = {a: 1, b: 3, c: 4}
+    addToLocalStorage('arrayName', item)
+    addToLocalStorage('arrayName', item3)
+
 }
+
+// В localStorage зберігаються масиви.
+// Вам потрібно зробити функцію, які дістає потрібний вам масив з localStorage та додає в нього об'єкт
+// сигнатура функції -
+// addToLocalStorage(arrayName:string,objToAdd:any{}):void
